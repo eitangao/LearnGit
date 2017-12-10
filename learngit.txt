@@ -22,3 +22,4 @@ Automatic merge failed; fix conflicts and then commit the result.
 git add .
 git commit -m"fix the conflict"
 git branch -d developing        //合并结束，删除dev分支。
+git push 			//将修改提交到远程仓库
