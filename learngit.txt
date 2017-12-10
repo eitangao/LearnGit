@@ -1,1 +1,6 @@
-this file is set up to learn git
+git init
+git add .
+git commit -m"set up a new file"
+git remote add origin https://github.com/eitangao/LearnGit.git
+git pull origin master --allow-unrelated-histories
+git push -u origin master
