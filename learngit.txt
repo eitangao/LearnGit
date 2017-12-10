@@ -1,7 +1,24 @@
-git init
+git init	//初始化
 git add .
-git commit -m"set up a new file"
-git remote add origin https://github.com/eitangao/LearnGit.git
-git pull origin master --allow-unrelated-histories
-git push -u origin master
-modify on developing branch again
+git commit -m"set up a new file"	//将文件提交到本地仓库
+git remote add origin https://github.com/eitangao/LearnGit.git	//与远程仓库关联
+git pull origin master --allow-unrelated-histories	//从远程仓库更新代码（允许没有相同历史的分支合并）
+git push -u origin master	//将远程仓库设为默认连接并向远程仓库提交代码
+git checkout -b developing	//创建dev分支并提交修改
+git add .	
+git commit -m"modify on dev branch"
+git checkout master		//切回master分支修改
+git add .
+git commit -m"modify on master branch"
+git checkout developing		//切到dev分支再次修改
+git add .
+git commit -m"modify on dev branch again"
+git checkout master
+git merge developing报错		//试图合并分支
+Auto-merging learngit.txt
+CONFLICT (content): Merge conflict in learngit.txt
+Automatic merge failed; fix conflicts and then commit the result.
+手动merge后。			//出现冲突，手动合并冲突并提交。
+git add .
+git commit -m"fix the conflict"
+git branch -d developing        //合并结束，删除dev分支。
